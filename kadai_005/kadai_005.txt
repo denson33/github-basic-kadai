@@ -1,0 +1,63 @@
+Last login: Wed Jun 18 20:35:18 on ttys000
+/Users/denson.gen/.zprofile:2: no such file or directory: /usr/local/bin/brew
+/Users/denson.gen/.zprofile:5: command not found: pyenv
+/Users/denson.gen/.zprofile:2: no such file or directory: /usr/local/bin/brew
+(base) denson.gen@MacBook-Air ~ % pwd
+/Users/denson.gen
+(base) denson.gen@MacBook-Air ~ % cd /Users/denson.gen/desktop
+(base) denson.gen@MacBook-Air desktop % mkdir git_challenge
+(base) denson.gen@MacBook-Air desktop % cd git_challenge
+(base) denson.gen@MacBook-Air git_challenge % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/denson.gen/Desktop/git_challenge/.git/
+(base) denson.gen@MacBook-Air git_challenge % touch hello_world.txt
+(base) denson.gen@MacBook-Air git_challenge % echo "Hello,world!" >> hello_world.txt
+dquote> 
+(base) denson.gen@MacBook-Air git_challenge %  echo 'Hello,world!' >> hello_world.txt
+(base) denson.gen@MacBook-Air git_challenge % git add hello_world.txt
+(base) denson.gen@MacBook-Air git_challenge % git commit -m "Hello,world!"
+dquote> 
+(base) denson.gen@MacBook-Air git_challenge % git commit -m 'Hello,world!'
+[master (root-commit) 3ed3356] Hello,world!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+(base) denson.gen@MacBook-Air git_challenge % echo 'こんにちは、世界！' >> hello_world.txt 
+(base) denson.gen@MacBook-Air git_challenge % git add hello.world.txt
+fatal: pathspec 'hello.world.txt' did not match any files
+(base) denson.gen@MacBook-Air git_challenge % git commit -m 'こんにちは、世界！'
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello_world.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) denson.gen@MacBook-Air git_challenge % git add hello_world.txt
+(base) denson.gen@MacBook-Air git_challenge % git commit -m 'こんにちは、世界！'
+[master 913ba68] こんにちは、世界！
+ 1 file changed, 1 insertion(+)
+(base) denson.gen@MacBook-Air git_challenge % git log hello_world.txt
+commit 913ba68a3de84028a41ef68f45c49db89f6eea50 (HEAD -> master)
+Author: denson <denson034@gmail.com>
+Date:   Wed Jun 18 22:55:49 2025 +0900
+
+    こんにちは、世界！
+
+commit 3ed3356ffa66a3c73fc79a26a82de244713261d6
+Author: denson <denson034@gmail.com>
+Date:   Wed Jun 18 22:52:47 2025 +0900
+
+    Hello,world!
